@@ -24,3 +24,60 @@ $(document).ready(function(){
 	$(".tooltip")
 	.css({top:mousey,left:mousex});
 });
+// ------MODAL----
+
+$(".modalClick").on("click", function(event){
+	console.log("click")
+	event.preventDefault();
+	$("#overlay");
+		.fadeIn();
+		.find("#modal");
+		.fadeIn();
+});
+$(".close").on("click", function(event){
+	event.preventDefault();
+	$("#overlay");
+		.fadeOut();
+		.find("#modal");
+		.fadeOut();
+});
+
+// fading status radio buttons----
+$("mystatus").mouseover(function(){
+	$(this).fadeTo(100,.3);
+});
+$(".mystatus").mouseOut(function(){
+	$(this).fadeTo(100,1);
+});
+
+// -----LOGIN----
+
+$("#signinButton").click(function(){
+	var user=$("#user").val();
+	var pass=$("#pass").val();
+	console.log("this Notifies you if the password is working");
+	$.ajax({
+		url:"xhr/login.php",
+		type:"post",
+		dataType:"json",
+		data:{
+			username:user,
+			password:pass
+		},
+		success:function(response){
+			console.log("test user");
+			if(response.error){
+				alert(response.error);
+			}else{
+				window.location.assign("account.html");
+			};
+		}
+	});
+
+});
+
+
+
+
+
+

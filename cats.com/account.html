@@ -5,6 +5,8 @@
     <title>Cats.com-Dashboard</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Sniglet' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="js/hide.js"></script>
 </head>
 <body>
 <div id = "nav">
@@ -29,7 +31,38 @@
 	<p>Number of cats:</p>
 	<p>Age:</p>
 	<p>other info stuff</p>
-
+<p><a href="#" class="modalClick">Add+</a></p>
+</div>
+<div id="overlay">
+	<div id ="modal">
+		<span class="close">X</span>
+		<h3 class="header">Add Cat</h3>
+		<div id ="add">
+			<form id="addForm">
+				<label>Project Name:</label>
+					<input name="projectName" type="text" id="projectName">
+				<label>Project Description:</label>
+					<input name="projectDescription" type="text" id="projectDescription"><br>
+				<label>Project Due Date</label>
+					<input name="projectDueDate" type="text" id="projectDueDate">
+					<br>
+					<label for"status">Select Status:</label>
+					<br>
+				<label class="mystatus">
+					<input type="radio" name="status" id="urgent"><!-- <img src="images/btn1.jpg" width="69" height="75"> -->
+				</label>
+				<label class="mystatus">
+					<input type="radio" name="status" id="normal"><!-- <img src="images/btn1.jpg" width="69" height="75"> -->
+				</label>
+				<label class="mystatus">
+					<input type="radio" name="status" id="delayed"><!-- <img src="images/btn1.jpg" width="69" height="75"> -->
+				</label>
+				<label class="mystatus">
+					<input type="radio" name="status" id="complete"><!-- <img src="images/btn1.jpg" width="69" height="75"> -->
+				</label>
+			</form>
+		</div>
+	</div>
 </div>
 <div id="board">
 
