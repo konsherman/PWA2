@@ -58,8 +58,8 @@ h2{
 }
 #board{
 	position: relative; 
-	top: -350px;
-	left: 279px;
+	top: -375px;
+	left: 264px;
 	background-color: #ff8a00;
 	width: 700px;
 	height:700px;
@@ -143,7 +143,7 @@ blockquote{
 #overlay{
 	width:100%;
 	height: 100%;
-	background:rgba(0,0,0,.5);
+	background:rgba(179, 54, 0, 0.5);
 	position: absolute;
 	top:0;
 	left: 0;
