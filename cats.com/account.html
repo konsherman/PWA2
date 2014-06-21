@@ -10,7 +10,7 @@
 
 <form id = "login">
 	Welcome Student!
-	<button>Logout</button>
+	<input name="logOut" type="button" id="logOut" value="Sign Out"d>
 </form>
 </div>
 <ul>
@@ -21,8 +21,7 @@
 
 <div id = "dash">
 
-
-<h2>Welcome Student!</h2>
+<h2 class="userid"></h2>
 <div id ="info">
 <img src="images/profile.png">
 	<p>Number of cats:</p>
@@ -42,29 +41,32 @@
 					<input name="projectDescription" type="text" id="projectDescription"><br>
 				<label>Project Due Date</label>
 					<input name="projectDueDate" type="text" id="projectDueDate">
+					<label>Project Statu</label>
+						<input name="projectStatus" type="text" id="projectStatus">
 					<br>
 					<label for"status">Select Status:</label>
 					<br>
 				<label class="mystatus">
-					<input type="radio" name="status" id="urgent"><!-- <img src="images/btn1.jpg" width="69" height="75"> -->
+					<input type="radio" name="projectStatus" id="urgent"><!-- <img src="images/btn1.jpg" width="69" height="75"> -->
 				</label>
 				<label class="mystatus">
-					<input type="radio" name="status" id="normal"><!-- <img src="images/btn1.jpg" width="69" height="75"> -->
+					<input type="radio" name="projectStatus" id="normal"><!-- <img src="images/btn1.jpg" width="69" height="75"> -->
 				</label>
 				<label class="mystatus">
-					<input type="radio" name="status" id="delayed"><!-- <img src="images/btn1.jpg" width="69" height="75"> -->
+					<input type="radio" name="projectStatus" id="delayed"><!-- <img src="images/btn1.jpg" width="69" height="75"> -->
 				</label>
 				<label class="mystatus">
-					<input type="radio" name="status" id="complete"><!-- <img src="images/btn1.jpg" width="69" height="75"> -->
+					<input type="radio" name="projectStatus" id="complete"><img src="images/btn1.jpg" width="69" height="75">
 				</label>
+				<input name="addButton" type="button" id="addButton" value="Add">
 			</form>
 		</div>
 	</div>
 </div>
-<div id="board">
+<div id="projectlist">
+	<div class="projects">
 
-
-
+	</div>
 </div> <!-- end board -->
 
 

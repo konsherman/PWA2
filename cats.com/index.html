@@ -19,7 +19,7 @@
 </div>
 <ul>
 	<li><a href="index.html">Home</a></li>
-	<li><a href="account.html">account</a></li>
+	<li><a href="#">account</a></li>
 </ul>
 <div id = "wrapper">
 
@@ -30,10 +30,20 @@
 
 <div id = "signUp">
 	<form id = "signUpf">
-        <label>First Name:</label><input name="signinButton" type="text" id="user" class="masterTooltip" title="please enter a first name" required/><br/>
-        <label>Last Name:</label><input name="signinButton" type="text" id="user" class="masterTooltip" title="please enter last name" required/><br/>
-        <label>Password</label><input name="signinButton" type="password" id="pass" class="masterTooltip" title="please enter a password" required/><br/>
-        <label>Email</label><input name="signinButton" type="password" id="pass" class="masterTooltip" title="please enter full email" required/><br/>        
+        <label for="first-name">First Name</label>
+            <input id="first" type="text" name="first-name" placeholder="Enter Your first name">
+        <label for="last-name">Last Name</label>
+            <input id="last" type="text" name="last-name" placeholder="Enter Your last name">
+        <label for="user-name">User Name</label>
+            <input id="userName" type="text" name="user-name" placeholder="Enter Your user name" required>
+        <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="Enter your email">
+        <label for="password">Password</label>
+            <input id="password" type="password" name="password" placeholder="Enter a password">
+        <label for="pass-confirm">Confirm</label>
+            <input type="password" name="pass-confirm" placeholder="Enter a password">
+        <input type="button" id="register" value="Sign up!">
+
         
 	</form>
 	<img src="images/signup.png" width="" height="" >
