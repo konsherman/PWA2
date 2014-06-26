@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    
     $('.tabs .tabs-nav a').click(function(e) {  
     $('.tabs .tabs-nav a.current').removeClass('current');  
     $(this).addClass('current');  
@@ -154,7 +153,7 @@ $("#addButton").on("click",function(e){
 			}
 		});
 });
-// ------SOMETHING ELSE TO DO WITH PROJECTS ADD----------
+// ------ADDING PROJECT----------
 var projects = function (){
 	$.ajax({
 		url:"xhr/get_projects.php",
@@ -167,7 +166,8 @@ var projects = function (){
 				for(var i=0, j=response.projects.length; i < j; i++){
 					var result = response.projects[i];
 					$(".projects").append(
-						"<div style='border:1px solid black'>"+"<input class='projectid' type='hidden' value='"+result.id + "'>" +"project Name:" + result.projectName+"<br>"+ "project Description: "+result.projectDescription + "<br>" + "project Statut:"+result.status+"<br>"+'<button class="deletebtn">Delete</button'+'</div> <br>'
+						'<div id="sortable" class="ui-state-default">'
+						+"<input class='projectid' type='hidden' value='"+result.id + "'>" +"project Name:" + result.projectName+"<br>"+ "project Description: "+result.projectDescription + "<br>" + "project Statut:"+result.status+"<br>"+'<button class="deletebtn">Delete</button'+'</div> <br>'
 						);
 				};
 				$(".deletebtn").on("click",function(e){
@@ -195,6 +195,24 @@ var projects = function (){
 	});
 }
 projects();
+
+
+// DRAG AND DROP
+    $( "#sortable" ).sortable();//calling the sortable function 
+    $( "#sortable" ).disableSelection();
+    $(".mydatepicker").datepicker();
+
+    $( document ).click(function() {
+  	$( "#toggle" ).toggle( "puff" ); //toggle poof div
+});
+
+
+
+
+
+
+
+
 
 	
 

@@ -5,7 +5,11 @@
     <title>Cats.com-Dashboard</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Sniglet' rel='stylesheet' type='text/css'>
+    <link href="css/excite-bike/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+  	
+  	
 <body>
+
 <div id = "nav">
 
 <form id = "login">
@@ -36,11 +40,11 @@
 		<div id ="add">
 			<form id="addForm">
 				<label>Project Name:</label>
-					<input name="projectName" type="text" id="projectName">
+					<input  name="projectName" type="text" id="projectName">
 				<label>Project Description:</label>
 					<input name="projectDescription" type="text" id="projectDescription"><br>
 				<label>Project Due Date</label>
-					<input name="projectDueDate" type="text" id="projectDueDate">
+					<input name="projectDueDate" type="text" id="projectDueDate" class="mydatepicker">
 					<label>Project Statu</label>
 						<input name="projectStatus" type="text" id="projectStatus">
 					<br>
@@ -64,7 +68,7 @@
 	</div>
 </div>
 <div id="projectlist">
-	<div class="projects">
+	<div class="projects" id="sortable">
 
 	</div>
 </div> <!-- end board -->
@@ -73,7 +77,7 @@
 
 </div>
 
-
+<div id="toggle"></div>
 	
 
 </div> <!-- end wrapper -->
@@ -81,7 +85,9 @@
 	<img src="images/logo.png">
 </footer>
 <div id = "clearFix"></div>
+
     <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.js"></script>
     <script type="text/javascript" src="js/hide.js"></script>
 </head>
 </body>
